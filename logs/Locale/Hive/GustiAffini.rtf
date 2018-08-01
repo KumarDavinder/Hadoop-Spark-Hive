@@ -1,0 +1,90 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 MacBook-Pro-di-davinder:apache-hive-2.1.1-bin davinderkumar$ bin/hive --hivevar INPUT_DIR='/Users/davinderkumar/Desktop/GGB/2011_2012.csv' --hivevar CUSTOM_JAR_PATH=/Users/davinderkumar/Desktop/Hive/hiveUDFHw1.jar -f /Users/davinderkumar/Desktop/Hive/similPreferences.hql > /Users/davinderkumar/Desktop/result.txt\
+SLF4J: Class path contains multiple SLF4J bindings.\
+SLF4J: Found binding in [jar:file:/Users/davinderkumar/Documents/apache-hive-2.1.1-bin/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]\
+SLF4J: Found binding in [jar:file:/Users/davinderkumar/Documents/hadoop-2.8.0/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]\
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.\
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]\
+\
+Logging initialized using configuration in jar:file:/Users/davinderkumar/Documents/apache-hive-2.1.1-bin/lib/hive-common-2.1.1.jar!/hive-log4j2.properties Async: true\
+OK\
+Time taken: 2.816 seconds\
+OK\
+Time taken: 0.138 seconds\
+OK\
+Time taken: 0.574 seconds\
+Loading data to table default.reviews\
+OK\
+Time taken: 1.287 seconds\
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.\
+Query ID = davinderkumar_20170516120117_9138bdf0-1754-4af5-a45b-9dd750816a04\
+Total jobs = 2\
+Stage-1 is selected by condition resolver.\
+Launching Job 1 out of 2\
+Number of reduce tasks not specified. Estimated from input data size: 1\
+In order to change the average load for a reducer (in bytes):\
+  set hive.exec.reducers.bytes.per.reducer=<number>\
+In order to limit the maximum number of reducers:\
+  set hive.exec.reducers.max=<number>\
+In order to set a constant number of reducers:\
+  set mapreduce.job.reduces=<number>\
+Job running in-process (local Hadoop)\
+2017-05-16 12:01:20,422 Stage-1 map = 0%,  reduce = 0%\
+2017-05-16 12:01:23,441 Stage-1 map = 100%,  reduce = 0%\
+2017-05-16 12:01:35,495 Stage-1 map = 100%,  reduce = 92%\
+2017-05-16 12:01:41,521 Stage-1 map = 100%,  reduce = 100%\
+Ended Job = job_local907403596_0001\
+Launching Job 2 out of 2\
+Number of reduce tasks not specified. Estimated from input data size: 3\
+In order to change the average load for a reducer (in bytes):\
+  set hive.exec.reducers.bytes.per.reducer=<number>\
+In order to limit the maximum number of reducers:\
+  set hive.exec.reducers.max=<number>\
+In order to set a constant number of reducers:\
+  set mapreduce.job.reduces=<number>\
+Job running in-process (local Hadoop)\
+2017-05-16 12:01:42,909 Stage-2 map = 0%,  reduce = 0%\
+2017-05-16 12:01:53,936 Stage-2 map = 17%,  reduce = 0%\
+2017-05-16 12:02:05,036 Stage-2 map = 100%,  reduce = 0%\
+2017-05-16 12:02:16,094 Stage-2 map = 50%,  reduce = 0%\
+2017-05-16 12:02:17,101 Stage-2 map = 87%,  reduce = 0%\
+2017-05-16 12:02:19,108 Stage-2 map = 100%,  reduce = 0%\
+2017-05-16 12:02:25,125 Stage-2 map = 100%,  reduce = 100%\
+2017-05-16 12:02:26,128 Stage-2 map = 100%,  reduce = 33%\
+2017-05-16 12:02:31,143 Stage-2 map = 100%,  reduce = 67%\
+2017-05-16 12:02:36,169 Stage-2 map = 100%,  reduce = 100%\
+Ended Job = job_local1075393942_0002\
+Moving data to directory hdfs://localhost:9000/user/hive/warehouse/resultes3\
+MapReduce Jobs Launched: \
+Stage-Stage-1:  HDFS Read: 385893872 HDFS Write: 385885680 SUCCESS\
+Stage-Stage-2:  HDFS Read: 964734680 HDFS Write: 1382390080 SUCCESS\
+Total MapReduce CPU Time Spent: 0 msec\
+OK\
+Time taken: 79.267 seconds\
+WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.\
+Query ID = davinderkumar_20170516120236_f9e6f454-7918-45cd-a97c-266dbeba9ebb\
+Total jobs = 1\
+Launching Job 1 out of 1\
+Number of reduce tasks determined at compile time: 1\
+In order to change the average load for a reducer (in bytes):\
+  set hive.exec.reducers.bytes.per.reducer=<number>\
+In order to limit the maximum number of reducers:\
+  set hive.exec.reducers.max=<number>\
+In order to set a constant number of reducers:\
+  set mapreduce.job.reduces=<number>\
+Job running in-process (local Hadoop)\
+2017-05-16 12:02:37,801 Stage-1 map = 0%,  reduce = 0%\
+2017-05-16 12:02:42,814 Stage-1 map = 100%,  reduce = 0%\
+2017-05-16 12:02:45,829 Stage-1 map = 100%,  reduce = 100%\
+Ended Job = job_local259287759_0003\
+MapReduce Jobs Launched: \
+Stage-Stage-1:  HDFS Read: 803619086 HDFS Write: 803610894 SUCCESS\
+Total MapReduce CPU Time Spent: 0 msec\
+OK\
+Time taken: 9.471 seconds, Fetched: 993427 row(s)}

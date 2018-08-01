@@ -1,0 +1,384 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 MacBook-Pro-di-davinder:~ davinderkumar$ Documents/spark-2.1.0-bin-hadoop2.7/bin/spark-submit --class SparkTop10ProductsForUser.SparkTop10ProductsForUser  --master local[4] Documents/workspace/BigDataHW1_Spark/target/SparkHW1-1.0.jar Desktop/GGB/2011_2012.csv \
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties\
+17/05/18 01:21:36 INFO SparkContext: Running Spark version 2.1.0\
+17/05/18 01:21:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable\
+17/05/18 01:21:36 INFO SecurityManager: Changing view acls to: davinderkumar\
+17/05/18 01:21:36 INFO SecurityManager: Changing modify acls to: davinderkumar\
+17/05/18 01:21:36 INFO SecurityManager: Changing view acls groups to: \
+17/05/18 01:21:36 INFO SecurityManager: Changing modify acls groups to: \
+17/05/18 01:21:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(davinderkumar); groups with view permissions: Set(); users  with modify permissions: Set(davinderkumar); groups with modify permissions: Set()\
+17/05/18 01:21:37 INFO Utils: Successfully started service 'sparkDriver' on port 50876.\
+17/05/18 01:21:37 INFO SparkEnv: Registering MapOutputTracker\
+17/05/18 01:21:37 INFO SparkEnv: Registering BlockManagerMaster\
+17/05/18 01:21:37 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information\
+17/05/18 01:21:37 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up\
+17/05/18 01:21:37 INFO DiskBlockManager: Created local directory at /private/var/folders/l9/dwwnnbqn0sd_r6lj13s3rx9m0000gn/T/blockmgr-227b145b-2554-4c48-97b5-7829c7b2f690\
+17/05/18 01:21:37 INFO MemoryStore: MemoryStore started with capacity 366.3 MB\
+17/05/18 01:21:37 INFO SparkEnv: Registering OutputCommitCoordinator\
+17/05/18 01:21:37 INFO Utils: Successfully started service 'SparkUI' on port 4040.\
+17/05/18 01:21:37 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.168.0.104:4040\
+17/05/18 01:21:37 INFO SparkContext: Added JAR file:/Users/davinderkumar/Documents/workspace/BigDataHW1_Spark/target/SparkHW1-1.0.jar at spark://192.168.0.104:50876/jars/SparkHW1-1.0.jar with timestamp 1495063297534\
+17/05/18 01:21:37 INFO Executor: Starting executor ID driver on host localhost\
+17/05/18 01:21:37 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 50877.\
+17/05/18 01:21:37 INFO NettyBlockTransferService: Server created on 192.168.0.104:50877\
+17/05/18 01:21:37 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy\
+17/05/18 01:21:37 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.0.104, 50877, None)\
+17/05/18 01:21:37 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.0.104:50877 with 366.3 MB RAM, BlockManagerId(driver, 192.168.0.104, 50877, None)\
+17/05/18 01:21:37 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.0.104, 50877, None)\
+17/05/18 01:21:37 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.0.104, 50877, None)\
+17/05/18 01:21:38 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 236.5 KB, free 366.1 MB)\
+17/05/18 01:21:38 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 22.9 KB, free 366.0 MB)\
+17/05/18 01:21:38 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.0.104:50877 (size: 22.9 KB, free: 366.3 MB)\
+17/05/18 01:21:38 INFO SparkContext: Created broadcast 0 from textFile at SparkTop10ProductsForUser.java:29\
+17/05/18 01:21:38 INFO FileInputFormat: Total input paths to process : 1\
+17/05/18 01:21:39 INFO SparkContext: Starting job: sortByKey at SparkTop10ProductsForUser.java:63\
+17/05/18 01:21:39 INFO DAGScheduler: Registering RDD 3 (mapValues at SparkTop10ProductsForUser.java:45)\
+17/05/18 01:21:39 INFO DAGScheduler: Registering RDD 6 (mapToPair at SparkTop10ProductsForUser.java:51)\
+17/05/18 01:21:39 INFO DAGScheduler: Got job 0 (sortByKey at SparkTop10ProductsForUser.java:63) with 6 output partitions\
+17/05/18 01:21:39 INFO DAGScheduler: Final stage: ResultStage 2 (sortByKey at SparkTop10ProductsForUser.java:63)\
+17/05/18 01:21:39 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)\
+17/05/18 01:21:39 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 1)\
+17/05/18 01:21:39 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at mapValues at SparkTop10ProductsForUser.java:45), which has no missing parents\
+17/05/18 01:21:39 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 5.5 KB, free 366.0 MB)\
+17/05/18 01:21:39 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.0 KB, free 366.0 MB)\
+17/05/18 01:21:39 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 192.168.0.104:50877 (size: 3.0 KB, free: 366.3 MB)\
+17/05/18 01:21:39 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:996\
+17/05/18 01:21:39 INFO DAGScheduler: Submitting 6 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at mapValues at SparkTop10ProductsForUser.java:45)\
+17/05/18 01:21:39 INFO TaskSchedulerImpl: Adding task set 0.0 with 6 tasks\
+17/05/18 01:21:39 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 6049 bytes)\
+17/05/18 01:21:39 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, PROCESS_LOCAL, 6049 bytes)\
+17/05/18 01:21:39 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, PROCESS_LOCAL, 6049 bytes)\
+17/05/18 01:21:39 INFO TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, localhost, executor driver, partition 3, PROCESS_LOCAL, 6049 bytes)\
+17/05/18 01:21:39 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)\
+17/05/18 01:21:39 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)\
+17/05/18 01:21:39 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)\
+17/05/18 01:21:39 INFO Executor: Running task 3.0 in stage 0.0 (TID 3)\
+17/05/18 01:21:39 INFO Executor: Fetching spark://192.168.0.104:50876/jars/SparkHW1-1.0.jar with timestamp 1495063297534\
+17/05/18 01:21:39 INFO TransportClientFactory: Successfully created connection to /192.168.0.104:50876 after 36 ms (0 ms spent in bootstraps)\
+17/05/18 01:21:39 INFO Utils: Fetching spark://192.168.0.104:50876/jars/SparkHW1-1.0.jar to /private/var/folders/l9/dwwnnbqn0sd_r6lj13s3rx9m0000gn/T/spark-0137bae3-895a-48f4-b396-9217be296f8a/userFiles-7a7cf64c-65f6-40b2-8204-016464b3e8e5/fetchFileTemp6217230208241568380.tmp\
+17/05/18 01:21:39 INFO Executor: Adding file:/private/var/folders/l9/dwwnnbqn0sd_r6lj13s3rx9m0000gn/T/spark-0137bae3-895a-48f4-b396-9217be296f8a/userFiles-7a7cf64c-65f6-40b2-8204-016464b3e8e5/SparkHW1-1.0.jar to class loader\
+17/05/18 01:21:39 INFO HadoopRDD: Input split: file:/Users/davinderkumar/Desktop/GGB/2011_2012.csv:33554432+33554432\
+17/05/18 01:21:39 INFO HadoopRDD: Input split: file:/Users/davinderkumar/Desktop/GGB/2011_2012.csv:100663296+33554432\
+17/05/18 01:21:39 INFO HadoopRDD: Input split: file:/Users/davinderkumar/Desktop/GGB/2011_2012.csv:0+33554432\
+17/05/18 01:21:39 INFO HadoopRDD: Input split: file:/Users/davinderkumar/Desktop/GGB/2011_2012.csv:67108864+33554432\
+17/05/18 01:21:39 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id\
+17/05/18 01:21:39 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id\
+17/05/18 01:21:39 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition\
+17/05/18 01:21:39 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id\
+17/05/18 01:21:39 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap\
+17/05/18 01:21:41 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 1823 bytes result sent to driver\
+17/05/18 01:21:41 INFO TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, localhost, executor driver, partition 4, PROCESS_LOCAL, 6049 bytes)\
+17/05/18 01:21:41 INFO Executor: Running task 4.0 in stage 0.0 (TID 4)\
+17/05/18 01:21:41 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 2260 ms on localhost (executor driver) (1/6)\
+17/05/18 01:21:41 INFO HadoopRDD: Input split: file:/Users/davinderkumar/Desktop/GGB/2011_2012.csv:134217728+33554432\
+17/05/18 01:21:41 INFO Executor: Finished task 3.0 in stage 0.0 (TID 3). 1736 bytes result sent to driver\
+17/05/18 01:21:41 INFO TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, localhost, executor driver, partition 5, PROCESS_LOCAL, 6049 bytes)\
+17/05/18 01:21:41 INFO TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 2305 ms on localhost (executor driver) (2/6)\
+17/05/18 01:21:41 INFO Executor: Running task 5.0 in stage 0.0 (TID 5)\
+17/05/18 01:21:41 INFO HadoopRDD: Input split: file:/Users/davinderkumar/Desktop/GGB/2011_2012.csv:167772160+25170680\
+17/05/18 01:21:41 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1736 bytes result sent to driver\
+17/05/18 01:21:41 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2386 ms on localhost (executor driver) (3/6)\
+17/05/18 01:21:41 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 1823 bytes result sent to driver\
+17/05/18 01:21:41 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 2352 ms on localhost (executor driver) (4/6)\
+17/05/18 01:21:42 INFO Executor: Finished task 5.0 in stage 0.0 (TID 5). 1736 bytes result sent to driver\
+17/05/18 01:21:42 INFO TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 620 ms on localhost (executor driver) (5/6)\
+17/05/18 01:21:42 INFO Executor: Finished task 4.0 in stage 0.0 (TID 4). 1736 bytes result sent to driver\
+17/05/18 01:21:42 INFO TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 761 ms on localhost (executor driver) (6/6)\
+17/05/18 01:21:42 INFO DAGScheduler: ShuffleMapStage 0 (mapValues at SparkTop10ProductsForUser.java:45) finished in 3,067 s\
+17/05/18 01:21:42 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool \
+17/05/18 01:21:42 INFO DAGScheduler: looking for newly runnable stages\
+17/05/18 01:21:42 INFO DAGScheduler: running: Set()\
+17/05/18 01:21:42 INFO DAGScheduler: waiting: Set(ShuffleMapStage 1, ResultStage 2)\
+17/05/18 01:21:42 INFO DAGScheduler: failed: Set()\
+17/05/18 01:21:42 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[6] at mapToPair at SparkTop10ProductsForUser.java:51), which has no missing parents\
+17/05/18 01:21:42 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 5.2 KB, free 366.0 MB)\
+17/05/18 01:21:42 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.7 KB, free 366.0 MB)\
+17/05/18 01:21:42 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 192.168.0.104:50877 (size: 2.7 KB, free: 366.3 MB)\
+17/05/18 01:21:42 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:996\
+17/05/18 01:21:42 INFO DAGScheduler: Submitting 6 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[6] at mapToPair at SparkTop10ProductsForUser.java:51)\
+17/05/18 01:21:42 INFO TaskSchedulerImpl: Adding task set 1.0 with 6 tasks\
+17/05/18 01:21:42 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 6, localhost, executor driver, partition 0, ANY, 5800 bytes)\
+17/05/18 01:21:42 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 7, localhost, executor driver, partition 1, ANY, 5800 bytes)\
+17/05/18 01:21:42 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 8, localhost, executor driver, partition 2, ANY, 5800 bytes)\
+17/05/18 01:21:42 INFO TaskSetManager: Starting task 3.0 in stage 1.0 (TID 9, localhost, executor driver, partition 3, ANY, 5800 bytes)\
+17/05/18 01:21:42 INFO Executor: Running task 2.0 in stage 1.0 (TID 8)\
+17/05/18 01:21:42 INFO Executor: Running task 3.0 in stage 1.0 (TID 9)\
+17/05/18 01:21:42 INFO Executor: Running task 1.0 in stage 1.0 (TID 7)\
+17/05/18 01:21:42 INFO Executor: Running task 0.0 in stage 1.0 (TID 6)\
+17/05/18 01:21:42 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:42 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:42 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:42 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:42 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 12 ms\
+17/05/18 01:21:42 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 3 ms\
+17/05/18 01:21:42 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 13 ms\
+17/05/18 01:21:42 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 12 ms\
+17/05/18 01:21:43 INFO Executor: Finished task 2.0 in stage 1.0 (TID 8). 2128 bytes result sent to driver\
+17/05/18 01:21:43 INFO Executor: Finished task 3.0 in stage 1.0 (TID 9). 2128 bytes result sent to driver\
+17/05/18 01:21:43 INFO TaskSetManager: Starting task 4.0 in stage 1.0 (TID 10, localhost, executor driver, partition 4, ANY, 5800 bytes)\
+17/05/18 01:21:43 INFO Executor: Running task 4.0 in stage 1.0 (TID 10)\
+17/05/18 01:21:43 INFO TaskSetManager: Starting task 5.0 in stage 1.0 (TID 11, localhost, executor driver, partition 5, ANY, 5800 bytes)\
+17/05/18 01:21:43 INFO Executor: Running task 5.0 in stage 1.0 (TID 11)\
+17/05/18 01:21:43 INFO TaskSetManager: Finished task 3.0 in stage 1.0 (TID 9) in 1104 ms on localhost (executor driver) (1/6)\
+17/05/18 01:21:43 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 8) in 1105 ms on localhost (executor driver) (2/6)\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:43 INFO Executor: Finished task 1.0 in stage 1.0 (TID 7). 2128 bytes result sent to driver\
+17/05/18 01:21:43 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 7) in 1129 ms on localhost (executor driver) (3/6)\
+17/05/18 01:21:43 INFO Executor: Finished task 0.0 in stage 1.0 (TID 6). 2128 bytes result sent to driver\
+17/05/18 01:21:43 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 6) in 1193 ms on localhost (executor driver) (4/6)\
+17/05/18 01:21:43 INFO Executor: Finished task 4.0 in stage 1.0 (TID 10). 2055 bytes result sent to driver\
+17/05/18 01:21:43 INFO TaskSetManager: Finished task 4.0 in stage 1.0 (TID 10) in 440 ms on localhost (executor driver) (5/6)\
+17/05/18 01:21:43 INFO Executor: Finished task 5.0 in stage 1.0 (TID 11). 2055 bytes result sent to driver\
+17/05/18 01:21:43 INFO TaskSetManager: Finished task 5.0 in stage 1.0 (TID 11) in 441 ms on localhost (executor driver) (6/6)\
+17/05/18 01:21:43 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool \
+17/05/18 01:21:43 INFO DAGScheduler: ShuffleMapStage 1 (mapToPair at SparkTop10ProductsForUser.java:51) finished in 1,548 s\
+17/05/18 01:21:43 INFO DAGScheduler: looking for newly runnable stages\
+17/05/18 01:21:43 INFO DAGScheduler: running: Set()\
+17/05/18 01:21:43 INFO DAGScheduler: waiting: Set(ResultStage 2)\
+17/05/18 01:21:43 INFO DAGScheduler: failed: Set()\
+17/05/18 01:21:43 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[10] at sortByKey at SparkTop10ProductsForUser.java:63), which has no missing parents\
+17/05/18 01:21:43 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 6.5 KB, free 366.0 MB)\
+17/05/18 01:21:43 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.2 KB, free 366.0 MB)\
+17/05/18 01:21:43 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 192.168.0.104:50877 (size: 3.2 KB, free: 366.3 MB)\
+17/05/18 01:21:43 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:996\
+17/05/18 01:21:43 INFO DAGScheduler: Submitting 6 missing tasks from ResultStage 2 (MapPartitionsRDD[10] at sortByKey at SparkTop10ProductsForUser.java:63)\
+17/05/18 01:21:43 INFO TaskSchedulerImpl: Adding task set 2.0 with 6 tasks\
+17/05/18 01:21:43 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 12, localhost, executor driver, partition 0, ANY, 5811 bytes)\
+17/05/18 01:21:43 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 13, localhost, executor driver, partition 1, ANY, 5811 bytes)\
+17/05/18 01:21:43 INFO TaskSetManager: Starting task 2.0 in stage 2.0 (TID 14, localhost, executor driver, partition 2, ANY, 5811 bytes)\
+17/05/18 01:21:43 INFO TaskSetManager: Starting task 3.0 in stage 2.0 (TID 15, localhost, executor driver, partition 3, ANY, 5811 bytes)\
+17/05/18 01:21:43 INFO Executor: Running task 3.0 in stage 2.0 (TID 15)\
+17/05/18 01:21:43 INFO Executor: Running task 2.0 in stage 2.0 (TID 14)\
+17/05/18 01:21:43 INFO Executor: Running task 0.0 in stage 2.0 (TID 12)\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:43 INFO Executor: Running task 1.0 in stage 2.0 (TID 13)\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:43 INFO Executor: Finished task 3.0 in stage 2.0 (TID 15). 3370 bytes result sent to driver\
+17/05/18 01:21:43 INFO Executor: Finished task 2.0 in stage 2.0 (TID 14). 3284 bytes result sent to driver\
+17/05/18 01:21:43 INFO TaskSetManager: Starting task 4.0 in stage 2.0 (TID 16, localhost, executor driver, partition 4, ANY, 5811 bytes)\
+17/05/18 01:21:43 INFO Executor: Running task 4.0 in stage 2.0 (TID 16)\
+17/05/18 01:21:43 INFO TaskSetManager: Starting task 5.0 in stage 2.0 (TID 17, localhost, executor driver, partition 5, ANY, 5811 bytes)\
+17/05/18 01:21:43 INFO TaskSetManager: Finished task 3.0 in stage 2.0 (TID 15) in 237 ms on localhost (executor driver) (1/6)\
+17/05/18 01:21:43 INFO TaskSetManager: Finished task 2.0 in stage 2.0 (TID 14) in 238 ms on localhost (executor driver) (2/6)\
+17/05/18 01:21:43 INFO Executor: Running task 5.0 in stage 2.0 (TID 17)\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:43 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:44 INFO Executor: Finished task 1.0 in stage 2.0 (TID 13). 3283 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 13) in 304 ms on localhost (executor driver) (3/6)\
+17/05/18 01:21:44 INFO Executor: Finished task 0.0 in stage 2.0 (TID 12). 3287 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 12) in 315 ms on localhost (executor driver) (4/6)\
+17/05/18 01:21:44 INFO Executor: Finished task 5.0 in stage 2.0 (TID 17). 3218 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 5.0 in stage 2.0 (TID 17) in 128 ms on localhost (executor driver) (5/6)\
+17/05/18 01:21:44 INFO Executor: Finished task 4.0 in stage 2.0 (TID 16). 3220 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 4.0 in stage 2.0 (TID 16) in 131 ms on localhost (executor driver) (6/6)\
+17/05/18 01:21:44 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool \
+17/05/18 01:21:44 INFO DAGScheduler: ResultStage 2 (sortByKey at SparkTop10ProductsForUser.java:63) finished in 0,370 s\
+17/05/18 01:21:44 INFO DAGScheduler: Job 0 finished: sortByKey at SparkTop10ProductsForUser.java:63, took 5,118174 s\
+17/05/18 01:21:44 INFO SparkContext: Starting job: collectAsMap at SparkTop10ProductsForUser.java:80\
+17/05/18 01:21:44 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 1 is 171 bytes\
+17/05/18 01:21:44 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 159 bytes\
+17/05/18 01:21:44 INFO DAGScheduler: Registering RDD 8 (groupByKey at SparkTop10ProductsForUser.java:63)\
+17/05/18 01:21:44 INFO DAGScheduler: Registering RDD 12 (mapToPair at SparkTop10ProductsForUser.java:65)\
+17/05/18 01:21:44 INFO DAGScheduler: Got job 1 (collectAsMap at SparkTop10ProductsForUser.java:80) with 6 output partitions\
+17/05/18 01:21:44 INFO DAGScheduler: Final stage: ResultStage 7 (collectAsMap at SparkTop10ProductsForUser.java:80)\
+17/05/18 01:21:44 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)\
+17/05/18 01:21:44 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 6)\
+17/05/18 01:21:44 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[8] at groupByKey at SparkTop10ProductsForUser.java:63), which has no missing parents\
+17/05/18 01:21:44 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 6.5 KB, free 366.0 MB)\
+17/05/18 01:21:44 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.3 KB, free 366.0 MB)\
+17/05/18 01:21:44 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 192.168.0.104:50877 (size: 3.3 KB, free: 366.3 MB)\
+17/05/18 01:21:44 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:996\
+17/05/18 01:21:44 INFO DAGScheduler: Submitting 6 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[8] at groupByKey at SparkTop10ProductsForUser.java:63)\
+17/05/18 01:21:44 INFO TaskSchedulerImpl: Adding task set 5.0 with 6 tasks\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 18, localhost, executor driver, partition 0, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 19, localhost, executor driver, partition 1, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 2.0 in stage 5.0 (TID 20, localhost, executor driver, partition 2, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 3.0 in stage 5.0 (TID 21, localhost, executor driver, partition 3, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO Executor: Running task 1.0 in stage 5.0 (TID 19)\
+17/05/18 01:21:44 INFO Executor: Running task 0.0 in stage 5.0 (TID 18)\
+17/05/18 01:21:44 INFO Executor: Running task 2.0 in stage 5.0 (TID 20)\
+17/05/18 01:21:44 INFO Executor: Running task 3.0 in stage 5.0 (TID 21)\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:44 INFO Executor: Finished task 2.0 in stage 5.0 (TID 20). 2128 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 4.0 in stage 5.0 (TID 22, localhost, executor driver, partition 4, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 2.0 in stage 5.0 (TID 20) in 468 ms on localhost (executor driver) (1/6)\
+17/05/18 01:21:44 INFO Executor: Running task 4.0 in stage 5.0 (TID 22)\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:44 INFO Executor: Finished task 0.0 in stage 5.0 (TID 18). 2128 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 5.0 in stage 5.0 (TID 23, localhost, executor driver, partition 5, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 18) in 489 ms on localhost (executor driver) (2/6)\
+17/05/18 01:21:44 INFO Executor: Running task 5.0 in stage 5.0 (TID 23)\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:44 INFO Executor: Finished task 3.0 in stage 5.0 (TID 21). 2128 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 3.0 in stage 5.0 (TID 21) in 491 ms on localhost (executor driver) (3/6)\
+17/05/18 01:21:44 INFO Executor: Finished task 1.0 in stage 5.0 (TID 19). 2128 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 19) in 498 ms on localhost (executor driver) (4/6)\
+17/05/18 01:21:44 INFO Executor: Finished task 4.0 in stage 5.0 (TID 22). 2055 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 4.0 in stage 5.0 (TID 22) in 182 ms on localhost (executor driver) (5/6)\
+17/05/18 01:21:44 INFO Executor: Finished task 5.0 in stage 5.0 (TID 23). 2055 bytes result sent to driver\
+17/05/18 01:21:44 INFO TaskSetManager: Finished task 5.0 in stage 5.0 (TID 23) in 171 ms on localhost (executor driver) (6/6)\
+17/05/18 01:21:44 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool \
+17/05/18 01:21:44 INFO DAGScheduler: ShuffleMapStage 5 (groupByKey at SparkTop10ProductsForUser.java:63) finished in 0,659 s\
+17/05/18 01:21:44 INFO DAGScheduler: looking for newly runnable stages\
+17/05/18 01:21:44 INFO DAGScheduler: running: Set()\
+17/05/18 01:21:44 INFO DAGScheduler: waiting: Set(ShuffleMapStage 6, ResultStage 7)\
+17/05/18 01:21:44 INFO DAGScheduler: failed: Set()\
+17/05/18 01:21:44 INFO DAGScheduler: Submitting ShuffleMapStage 6 (MapPartitionsRDD[12] at mapToPair at SparkTop10ProductsForUser.java:65), which has no missing parents\
+17/05/18 01:21:44 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 4.9 KB, free 366.0 MB)\
+17/05/18 01:21:44 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.7 KB, free 366.0 MB)\
+17/05/18 01:21:44 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 192.168.0.104:50877 (size: 2.7 KB, free: 366.3 MB)\
+17/05/18 01:21:44 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:996\
+17/05/18 01:21:44 INFO DAGScheduler: Submitting 6 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[12] at mapToPair at SparkTop10ProductsForUser.java:65)\
+17/05/18 01:21:44 INFO TaskSchedulerImpl: Adding task set 6.0 with 6 tasks\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 24, localhost, executor driver, partition 0, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 25, localhost, executor driver, partition 1, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 26, localhost, executor driver, partition 2, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 27, localhost, executor driver, partition 3, ANY, 5804 bytes)\
+17/05/18 01:21:44 INFO Executor: Running task 2.0 in stage 6.0 (TID 26)\
+17/05/18 01:21:44 INFO Executor: Running task 3.0 in stage 6.0 (TID 27)\
+17/05/18 01:21:44 INFO Executor: Running task 1.0 in stage 6.0 (TID 25)\
+17/05/18 01:21:44 INFO Executor: Running task 0.0 in stage 6.0 (TID 24)\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:44 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 47 ms\
+17/05/18 01:21:45 INFO Executor: Finished task 0.0 in stage 6.0 (TID 24). 2128 bytes result sent to driver\
+17/05/18 01:21:45 INFO TaskSetManager: Starting task 4.0 in stage 6.0 (TID 28, localhost, executor driver, partition 4, ANY, 5804 bytes)\
+17/05/18 01:21:45 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 24) in 701 ms on localhost (executor driver) (1/6)\
+17/05/18 01:21:45 INFO Executor: Running task 4.0 in stage 6.0 (TID 28)\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:45 INFO Executor: Finished task 1.0 in stage 6.0 (TID 25). 2128 bytes result sent to driver\
+17/05/18 01:21:45 INFO TaskSetManager: Starting task 5.0 in stage 6.0 (TID 29, localhost, executor driver, partition 5, ANY, 5804 bytes)\
+17/05/18 01:21:45 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 25) in 722 ms on localhost (executor driver) (2/6)\
+17/05/18 01:21:45 INFO Executor: Running task 5.0 in stage 6.0 (TID 29)\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:45 INFO Executor: Finished task 3.0 in stage 6.0 (TID 27). 2128 bytes result sent to driver\
+17/05/18 01:21:45 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 27) in 786 ms on localhost (executor driver) (3/6)\
+17/05/18 01:21:45 INFO Executor: Finished task 2.0 in stage 6.0 (TID 26). 2128 bytes result sent to driver\
+17/05/18 01:21:45 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 26) in 800 ms on localhost (executor driver) (4/6)\
+17/05/18 01:21:45 INFO Executor: Finished task 4.0 in stage 6.0 (TID 28). 2128 bytes result sent to driver\
+17/05/18 01:21:45 INFO TaskSetManager: Finished task 4.0 in stage 6.0 (TID 28) in 326 ms on localhost (executor driver) (5/6)\
+17/05/18 01:21:45 INFO Executor: Finished task 5.0 in stage 6.0 (TID 29). 2128 bytes result sent to driver\
+17/05/18 01:21:45 INFO TaskSetManager: Finished task 5.0 in stage 6.0 (TID 29) in 307 ms on localhost (executor driver) (6/6)\
+17/05/18 01:21:45 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool \
+17/05/18 01:21:45 INFO DAGScheduler: ShuffleMapStage 6 (mapToPair at SparkTop10ProductsForUser.java:65) finished in 1,028 s\
+17/05/18 01:21:45 INFO DAGScheduler: looking for newly runnable stages\
+17/05/18 01:21:45 INFO DAGScheduler: running: Set()\
+17/05/18 01:21:45 INFO DAGScheduler: waiting: Set(ResultStage 7)\
+17/05/18 01:21:45 INFO DAGScheduler: failed: Set()\
+17/05/18 01:21:45 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[14] at groupByKey at SparkTop10ProductsForUser.java:80), which has no missing parents\
+17/05/18 01:21:45 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 5.7 KB, free 366.0 MB)\
+17/05/18 01:21:45 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 3.0 KB, free 366.0 MB)\
+17/05/18 01:21:45 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 192.168.0.104:50877 (size: 3.0 KB, free: 366.3 MB)\
+17/05/18 01:21:45 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:996\
+17/05/18 01:21:45 INFO DAGScheduler: Submitting 6 missing tasks from ResultStage 7 (MapPartitionsRDD[14] at groupByKey at SparkTop10ProductsForUser.java:80)\
+17/05/18 01:21:45 INFO TaskSchedulerImpl: Adding task set 7.0 with 6 tasks\
+17/05/18 01:21:45 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 30, localhost, executor driver, partition 0, ANY, 5815 bytes)\
+17/05/18 01:21:45 INFO TaskSetManager: Starting task 1.0 in stage 7.0 (TID 31, localhost, executor driver, partition 1, ANY, 5815 bytes)\
+17/05/18 01:21:45 INFO TaskSetManager: Starting task 2.0 in stage 7.0 (TID 32, localhost, executor driver, partition 2, ANY, 5815 bytes)\
+17/05/18 01:21:45 INFO TaskSetManager: Starting task 3.0 in stage 7.0 (TID 33, localhost, executor driver, partition 3, ANY, 5815 bytes)\
+17/05/18 01:21:45 INFO Executor: Running task 1.0 in stage 7.0 (TID 31)\
+17/05/18 01:21:45 INFO Executor: Running task 2.0 in stage 7.0 (TID 32)\
+17/05/18 01:21:45 INFO Executor: Running task 3.0 in stage 7.0 (TID 33)\
+17/05/18 01:21:45 INFO Executor: Running task 0.0 in stage 7.0 (TID 30)\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:45 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 12 ms\
+17/05/18 01:21:46 INFO MemoryStore: Block taskresult_32 stored as bytes in memory (estimated size 2.3 MB, free 363.7 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Added taskresult_32 in memory on 192.168.0.104:50877 (size: 2.3 MB, free: 363.9 MB)\
+17/05/18 01:21:46 INFO Executor: Finished task 2.0 in stage 7.0 (TID 32). 2426086 bytes result sent via BlockManager)\
+17/05/18 01:21:46 INFO TaskSetManager: Starting task 4.0 in stage 7.0 (TID 34, localhost, executor driver, partition 4, ANY, 5815 bytes)\
+17/05/18 01:21:46 INFO TransportClientFactory: Successfully created connection to /192.168.0.104:50877 after 2 ms (0 ms spent in bootstraps)\
+17/05/18 01:21:46 INFO Executor: Running task 4.0 in stage 7.0 (TID 34)\
+17/05/18 01:21:46 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:46 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 13 ms\
+17/05/18 01:21:46 INFO MemoryStore: Block taskresult_31 stored as bytes in memory (estimated size 2.3 MB, free 361.4 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Added taskresult_31 in memory on 192.168.0.104:50877 (size: 2.3 MB, free: 361.6 MB)\
+17/05/18 01:21:46 INFO Executor: Finished task 1.0 in stage 7.0 (TID 31). 2428228 bytes result sent via BlockManager)\
+17/05/18 01:21:46 INFO TaskSetManager: Starting task 5.0 in stage 7.0 (TID 35, localhost, executor driver, partition 5, ANY, 5815 bytes)\
+17/05/18 01:21:46 INFO Executor: Running task 5.0 in stage 7.0 (TID 35)\
+17/05/18 01:21:46 INFO ShuffleBlockFetcherIterator: Getting 6 non-empty blocks out of 6 blocks\
+17/05/18 01:21:46 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms\
+17/05/18 01:21:46 INFO MemoryStore: Block taskresult_33 stored as bytes in memory (estimated size 2.3 MB, free 359.1 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Added taskresult_33 in memory on 192.168.0.104:50877 (size: 2.3 MB, free: 359.3 MB)\
+17/05/18 01:21:46 INFO Executor: Finished task 3.0 in stage 7.0 (TID 33). 2425312 bytes result sent via BlockManager)\
+17/05/18 01:21:46 INFO TaskSetManager: Finished task 1.0 in stage 7.0 (TID 31) in 489 ms on localhost (executor driver) (1/6)\
+17/05/18 01:21:46 INFO TaskSetManager: Finished task 2.0 in stage 7.0 (TID 32) in 489 ms on localhost (executor driver) (2/6)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed taskresult_31 on 192.168.0.104:50877 in memory (size: 2.3 MB, free: 361.6 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed taskresult_32 on 192.168.0.104:50877 in memory (size: 2.3 MB, free: 363.9 MB)\
+17/05/18 01:21:46 INFO MemoryStore: Block taskresult_30 stored as bytes in memory (estimated size 2.3 MB, free 361.4 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Added taskresult_30 in memory on 192.168.0.104:50877 (size: 2.3 MB, free: 361.6 MB)\
+17/05/18 01:21:46 INFO Executor: Finished task 0.0 in stage 7.0 (TID 30). 2419578 bytes result sent via BlockManager)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed taskresult_33 on 192.168.0.104:50877 in memory (size: 2.3 MB, free: 364.0 MB)\
+17/05/18 01:21:46 INFO TaskSetManager: Finished task 3.0 in stage 7.0 (TID 33) in 557 ms on localhost (executor driver) (3/6)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed taskresult_30 on 192.168.0.104:50877 in memory (size: 2.3 MB, free: 366.3 MB)\
+17/05/18 01:21:46 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 30) in 594 ms on localhost (executor driver) (4/6)\
+17/05/18 01:21:46 INFO MemoryStore: Block taskresult_35 stored as bytes in memory (estimated size 2.3 MB, free 363.7 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Added taskresult_35 in memory on 192.168.0.104:50877 (size: 2.3 MB, free: 364.0 MB)\
+17/05/18 01:21:46 INFO Executor: Finished task 5.0 in stage 7.0 (TID 35). 2401527 bytes result sent via BlockManager)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 192.168.0.104:50877 in memory (size: 2.7 KB, free: 364.0 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 192.168.0.104:50877 in memory (size: 3.3 KB, free: 364.0 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 192.168.0.104:50877 in memory (size: 3.2 KB, free: 364.0 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 192.168.0.104:50877 in memory (size: 2.7 KB, free: 364.0 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.0.104:50877 in memory (size: 3.0 KB, free: 364.0 MB)\
+17/05/18 01:21:46 INFO MemoryStore: Block taskresult_34 stored as bytes in memory (estimated size 2.3 MB, free 361.4 MB)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Added taskresult_34 in memory on 192.168.0.104:50877 (size: 2.3 MB, free: 361.7 MB)\
+17/05/18 01:21:46 INFO Executor: Finished task 4.0 in stage 7.0 (TID 34). 2421886 bytes result sent via BlockManager)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed taskresult_35 on 192.168.0.104:50877 in memory (size: 2.3 MB, free: 364.0 MB)\
+17/05/18 01:21:46 INFO TaskSetManager: Finished task 5.0 in stage 7.0 (TID 35) in 637 ms on localhost (executor driver) (5/6)\
+17/05/18 01:21:46 INFO TaskSetManager: Finished task 4.0 in stage 7.0 (TID 34) in 778 ms on localhost (executor driver) (6/6)\
+17/05/18 01:21:46 INFO BlockManagerInfo: Removed taskresult_34 on 192.168.0.104:50877 in memory (size: 2.3 MB, free: 366.3 MB)\
+17/05/18 01:21:46 INFO DAGScheduler: ResultStage 7 (collectAsMap at SparkTop10ProductsForUser.java:80) finished in 1,048 s\
+17/05/18 01:21:46 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool \
+17/05/18 01:21:46 INFO DAGScheduler: Job 1 finished: collectAsMap at SparkTop10ProductsForUser.java:80, took 2,766492 s\
+\
+\
+Tempo impiegato SparkTop10: 11.535\
+17/05/18 01:21:47 INFO SparkContext: Invoking stop() from shutdown hook\
+17/05/18 01:21:47 INFO SparkUI: Stopped Spark web UI at http://192.168.0.104:4040\
+17/05/18 01:21:47 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!\
+17/05/18 01:21:47 INFO MemoryStore: MemoryStore cleared\
+17/05/18 01:21:47 INFO BlockManager: BlockManager stopped\
+17/05/18 01:21:47 INFO BlockManagerMaster: BlockManagerMaster stopped\
+17/05/18 01:21:47 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!\
+17/05/18 01:21:47 INFO SparkContext: Successfully stopped SparkContext\
+17/05/18 01:21:47 INFO ShutdownHookManager: Shutdown hook called\
+17/05/18 01:21:47 INFO ShutdownHookManager: Deleting directory /private/var/folders/l9/dwwnnbqn0sd_r6lj13s3rx9m0000gn/T/spark-0137bae3-895a-48f4-b396-9217be296f8a}
